@@ -17,3 +17,116 @@ img {
 }
 
 /* Add your styles below */
+
+h1 {
+  margin: 0;
+}
+
+body {
+  color: #f5f5f5;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  border-color: #f5f5f5;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: whitesmoke;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white; 
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+img.logo {
+  width: 40%;
+  max-width: 100px;
+  padding: 10px;
+}
+
+img.header {
+  width: 50%;
+  display: flex;
+  margin: auto;
+  border-radius: 50%;
+  max-width: 300px;
+  gap: 40px;
+}
+
+section {
+  display: flex;
+  gap: 40px;
+}
+
+ul.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.statistics {
+  display: flex;
+  gap: 10px;
+}
+
+.bio {
+  max-width: 500px;
+  gap: 40px
+}
+
+.mainsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.bio-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+@media (min-width: 576px) {
+  ul.grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  ul.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mainsection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+}
+
+@media (min-width: 992px) {
+  ul.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+    .mainsection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+}
