@@ -16,6 +16,12 @@ img {
   width: 100%;
 }
 
+
+:root {
+  --color-bg: black;
+  --color-text: #f5f5f5;
+}
+
 /* Add your styles below */
 
 h1 {
@@ -23,33 +29,37 @@ h1 {
 }
 
 body {
-  color: #f5f5f5;
-  background-color: black;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   font-family: Arial, Helvetica, sans-serif;
-  border-color: #f5f5f5;
+  border-color: var(--color-text);
 }
 
 header {
   display: flex;
   padding: 10px;
   justify-content: space-between;
+  align-items: center;
 }
 
 hr {
   border: none;
   height: 1px;
-  background-color: whitesmoke;
+  background-color: var(--color-text);
 }
 
-nav > a {
+.nav-list {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
   text-decoration: none;
-  color: white; 
-  justify-content: space-around;
-  margin-top: 10px;
+  color: var(--color-text);
 }
 
 a:hover {
- text-decoration: underline;
+  text-decoration: underline;
 }
 
 img.logo {
@@ -60,11 +70,9 @@ img.logo {
 
 img.header {
   width: 50%;
-  display: flex;
   margin: auto;
   border-radius: 50%;
   max-width: 300px;
-  gap: 40px;
 }
 
 section {
@@ -75,7 +83,7 @@ section {
 ul.grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -86,27 +94,26 @@ ul.grid {
 
 .bio {
   max-width: 500px;
-  gap: 40px
 }
 
 .mainsection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 40px;
 }
 
 .bio-info {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   justify-content: space-between;
 }
 
-
-@media (min-width: 576px) {
-  ul.grid {
-    grid-template-columns: 1fr 1fr;
-  }
+footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--color-text);
 }
 
 @media (min-width: 768px) {
@@ -114,19 +121,13 @@ ul.grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .mainsection {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 @media (min-width: 992px) {
   ul.grid {
     grid-template-columns: repeat(3, 1fr);
   }
-    .mainsection {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 }
